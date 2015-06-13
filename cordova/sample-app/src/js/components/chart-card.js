@@ -1,20 +1,17 @@
 import React  from 'react';
 import MUI    from 'material-ui';
 import Chart  from 'react-chartjs';
-import Mixin from './abstract-paper-mmixin';
 
 const Paper     = MUI.Paper;
 const LineChart = Chart.Line;
 
 export default React.createClass({
-    mixins : [Mixin],
     render() {
         const chartData    = this.chartData();
         const chartOptions = this.chartOptions();
         return (
           <Paper zDepth={1}
-            innerClassName='chart-card' className={this.className()}
-            onTouchTap={this.touch}>
+            innerClassName='chart-card'>
             <LineChart data={chartData} options={chartOptions}/>
           </Paper>
         );
