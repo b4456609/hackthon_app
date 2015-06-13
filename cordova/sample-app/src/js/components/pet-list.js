@@ -14,12 +14,13 @@ var PetList = React.createClass({
                     return (
                       <Paper zDepth={1}
                         innerClassName='text-card'>
-                        <img src={pet.ImageName} height="100%" alt="boohoo" className="img-responsive"/>
-                        <p>類型:{pet.Type}</p>
-                        <p>性別:{pet.Sex}</p>
-                        <p>註解:{pet.Note}</p>
-                        <p>種類:{pet.Variety}</p>
-                        <p>原因:{pet.Reason}</p>
+                        <img src={pet.ImageName} alt="boohoo" className="img-responsive"/>
+                        <p>類型:{pet.Type}<br></br>
+                          性別:{pet.Sex}<br></br>
+                          種類:{pet.Variety}<br></br>
+                          原因:{pet.Reason}<br></br>
+                          註解:{pet.Note}
+                          </p>
                       </Paper>
                     );
                 })
